@@ -18,8 +18,12 @@ export default function Navigation() {
           size= focused? 25 : 20;
           color=focused? "green": "black";
          
-        }else{
+        }else if(route.name === "About"){
           iconName="info";
+          size= focused? 25 : 20;
+          color=focused? "green": "black";
+        }else if(route.name === "Contact"){
+          iconName="address-book";
           size= focused? 25 : 20;
           color=focused? "green": "black";
         }
@@ -27,8 +31,9 @@ export default function Navigation() {
           <FontAwesome5 name={iconName} size={size} color={color}/>
         )
       }})}>
-          <Tabs.Screen  name='Home' component={Home} />
+          <Tabs.Screen options={{header: () => null,tabBarBadge:3}}  name='Home' component={Home} />
           <Tabs.Screen name='About' component={About}/>
+          <Tabs.Screen name='Contact' component={About}/>
       </Tabs.Navigator>
    </NavigationContainer> 
   )
