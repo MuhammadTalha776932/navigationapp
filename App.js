@@ -17,7 +17,7 @@ import {
   Text,
   useColorScheme,
   View,
-  TextInput, TouchableOpacity,Pressable,FlatList
+  TextInput, TouchableOpacity,Pressable,SectionList
   
 } from 'react-native';
 
@@ -31,6 +31,7 @@ const App = () => {
     alert("Hello!");
   };
   return (
+    <Navigation>
       <SafeAreaView className="flex-1 flex-col h-full">
         <View className="relative h-[200px] items-center justify-center content-center bg-teal-600
         ">
@@ -39,8 +40,8 @@ const App = () => {
         <View className="flex-initial bottom-2 justify-start h-[500px]">
           <View className="flex justify-center bg-white h-full p-6 rounded-lg shadow-2xl
         
-          ">
-
+        ">
+    
           <Text className="text-2xl mb-5 bottom-4 text-center mt-4 font-sans uppercase">Login</Text>
           
           <TextInput
@@ -49,28 +50,28 @@ const App = () => {
             keyboardType="email-address"
             onChangeText={setEmail}
             value={email}
-          />
+            />
           <TextInput
             className="bg-gray-200 p-2 text-2xl rounded-lg h-[50px] mb-6"
             placeholder="Password"
             onChangeText={setPassword}
             value={password}
             secureTextEntry={true}
-          />
-          <View className="text-center items-center hover:bg-black">
-          <TouchableOpacity className="bg-indigo-500 w-[300px] text-white p-2 rounded-lg
-          hover:text-black
-          " activeOpacity={0.9} onPress={handleSubmit}>
-            <Text className="text-lg text-center text-white">Sign In</Text>
-          </TouchableOpacity>
-          </View>
+            />
+            <View className="text-center items-center hover:bg-black">
+              <TouchableOpacity className="bg-indigo-500 w-[300px] text-white p-2 rounded-lg
+              hover:text-black
+              " activeOpacity={0.9} onPress={handleSubmit}>
+                  <Text className="text-lg text-center text-white">Sign In</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
-        <Navigation/>
       </SafeAreaView>
-  );
-};
-
-
+    </Navigation>
+    );
+  };
+  
+  
 
 export default App;

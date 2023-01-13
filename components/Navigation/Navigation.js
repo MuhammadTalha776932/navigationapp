@@ -7,11 +7,12 @@ import About from "../Screens/About"
 const stack = createStackNavigator();
 
 export default function Navigation() {
+
   return (
    <NavigationContainer>
-    <stack.Navigator>
-        <stack.Screen name='Home' component={Home}/>
-        <stack.Screen name='AboutScreen' component={About}/>
+    <stack.Navigator >
+        <stack.Screen name='Home' component={Home} />
+        <stack.Screen name='About' component={About}/>
     </stack.Navigator>
    </NavigationContainer> 
   )
