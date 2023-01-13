@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import { Text,SafeAreaView,Pressable, View,TouchableOpacity,Tex  } from 'react-native'
+import { Text,SafeAreaView,Pressable, View  } from 'react-native'
 
 function Home({navigation}) {
     const goToAbout = () =>{
