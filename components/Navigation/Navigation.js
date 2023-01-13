@@ -30,7 +30,7 @@ export default function Navigation() {
         return(
           <FontAwesome5 name={iconName} size={size} color={color}/>
         )
-      }})}>
+      },tabBarLabelPosition:"beside-icon",tabBarShowLabel:false})}>
           <Tabs.Screen options={{header: () => null,tabBarBadge:3}}  name='Home' component={Home} />
           <Tabs.Screen name='About' component={About}/>
           <Tabs.Screen name='Contact' component={About}/>
