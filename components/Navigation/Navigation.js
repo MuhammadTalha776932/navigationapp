@@ -11,7 +11,7 @@ export default function Navigation() {
   return (
    <NavigationContainer >
     <stack.Navigator >
-        <stack.Screen options={{header:()=>null}} name='Home' component={Home} />
+        <stack.Screen name='Home' component={Home} />
         <stack.Screen name='About' component={About}/>
     </stack.Navigator>
    </NavigationContainer> 
