@@ -9,11 +9,13 @@ const Tabs = createBottomTabNavigator();
 export default function Navigation() {
 
   return (
-   <NavigationContainer >
-    <Tabs.Navigator >
-        <Tabs.Screen name='Home' component={Home} />
-        <Tabs.Screen name='About' component={About}/>
-    </Tabs.Navigator>
+   <NavigationContainer>
+      <Tabs.Navigator screenOptions={ ({route}) =>({tabBarIcon:({focused,color,size})=>({
+        
+      })})}>
+          <Tabs.Screen  name='Home' component={Home} />
+          <Tabs.Screen name='About' component={About}/>
+      </Tabs.Navigator>
    </NavigationContainer> 
   )
 }

@@ -1,7 +1,7 @@
 import React  from 'react';
 import { Text,SafeAreaView, View  } from 'react-native'
 
-function Home({navigation}) {
+function Home() {
   return (
     <SafeAreaView className = "flex-1 justify-center items-center">
         <View>
