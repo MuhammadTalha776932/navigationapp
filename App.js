@@ -22,11 +22,17 @@ import {
 } from 'react-native';
 
 import Navigation from './components/Navigation/Navigation';
+import 'react-native-gesture-handler';
+import "react-native-reanimated";
+import DrawerNavigation from './components/Drawer/Drawer.navigation';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
 
   return (
-      <Navigation/>
+    <NavigationContainer>
+      <DrawerNavigation/>
+    </NavigationContainer>
     );
   };
   

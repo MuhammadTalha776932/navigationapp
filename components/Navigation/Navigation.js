@@ -10,7 +10,6 @@ const Tabs = createBottomTabNavigator();
 export default function Navigation() {
 
   return (
-   <NavigationContainer>
       <Tabs.Navigator screenOptions={ ({route}) =>({tabBarIcon:({focused,color,size})=>{
         let iconName;
         if(route.name === "Home"){
@@ -30,11 +29,10 @@ export default function Navigation() {
         return(
           <FontAwesome5 name={iconName} size={size} color={color}/>
         )
-      },tabBarLabelPosition:"beside-icon",tabBarShowLabel:false})}>
-          <Tabs.Screen options={{header: () => null,tabBarBadge:3}}  name='Home' component={Home} />
+      },tabBarLabelPosition:"beside-icon",tabBarShowLabel:false,header:()=>null})}>
+          <Tabs.Screen   name='Home' component={Home} />
           <Tabs.Screen name='About' component={About}/>
-          <Tabs.Screen name='Contact' component={About}/>
+          <Tabs.Screen options={{tabBarBadge:3,tabBarBadgeStyle:{color:"white",backgroundColor:"green"}}} name='Contact' component={About}/>
       </Tabs.Navigator>
-   </NavigationContainer> 
   )
 }
