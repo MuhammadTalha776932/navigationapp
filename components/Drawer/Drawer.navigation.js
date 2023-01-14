@@ -8,10 +8,10 @@ import Navigation from '../Navigation/Navigation';
 const DrawerNavigation = () => {
     const Drawer = createDrawerNavigator();
     return(
-        <Drawer.Navigator initialRouteName='Home'>
-            <Drawer.Screen name='Home' component={Navigation} />
-            <Drawer.Screen name='About' component={About}/>
-            <Drawer.Screen name='Contact' component={About}/>
+        <Drawer.Navigator initialRouteName='Home Page'>
+            <Drawer.Screen name='Home Page' component={Navigation} />
+            <Drawer.Screen name='About Page' component={About}/>
+            <Drawer.Screen name='Contact page' component={About}/>
         </Drawer.Navigator> 
     )
 }
