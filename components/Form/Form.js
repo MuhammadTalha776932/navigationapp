@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Text,SafeAreaView, View,TouchableOpacity,TextInput, ImageBackground  } from 'react-native'
+import { Text,View,TouchableOpacity,TextInput } from 'react-native'
 
 const Forms = () => {
     const [email, setEmail] = useState('');
