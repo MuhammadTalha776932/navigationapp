@@ -34,9 +34,8 @@ const DrawerNavigation = () => {
             backgroundColor:"#0081B4",
         }}}}
         > 
-            <Stack.Screen  name='Login Section' component={Home} />
-            <Stack.Screen  name='About Section' component={About}/>
-            <Stack.Screen  name='Setting Section' component={About}/>
+            <Stack.Screen options={{header:()=>null}}  name='Login Section' component={Home} />
+            <Stack.Screen  name='Home' component={About}/>
         </Stack.Navigator> 
     )
 }

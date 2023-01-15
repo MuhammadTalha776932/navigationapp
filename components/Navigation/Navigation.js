@@ -28,9 +28,9 @@ export default function Navigation(props) {
           <FontAwesome5 name={iconName} size={size} color={color}/>
         )
       },tabBarLabelPosition:"beside-icon",tabBarShowLabel:false,header:()=>null})}>
-          <Tabs.Screen   name='Home' component={Home} />
-          {/* <Tabs.Screen name='About' component={About}/>
-          <Tabs.Screen options={{tabBarBadge:3,tabBarBadgeStyle:{color:"white",backgroundColor:"green"}}} name='Contact' component={About}/> */}
+          {/* <Tabs.Screen   name='Home' component={Home} /> */}
+          <Tabs.Screen name='About' component={About}/>
+          <Tabs.Screen options={{tabBarBadge:3,tabBarBadgeStyle:{color:"white",backgroundColor:"green"}}} name='Contact' component={About}/>
       </Tabs.Navigator>
   )
 }

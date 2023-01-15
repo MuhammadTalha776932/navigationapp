@@ -1,12 +1,16 @@
 import React,{useState} from 'react';
 import { Text,View,TouchableOpacity,TextInput } from 'react-native'
 
-const Forms = () => {
+const Forms = ({navigation,route}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
     const handleSubmit = () => {
-      alert("Hello!");
+        if (email.length !== 0 && password.length !== 0) {
+            navigation.navigate("Home",{email,password})
+            return;
+        }
+        alert("Please enter the values");
     };
    return (
     <View className="flex-initial bottom-2 justify-start h-full">
