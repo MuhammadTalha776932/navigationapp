@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+
 import {createDrawerNavigator} from "@react-navigation/drawer";
 
-import Home from "../Screens/Home"
+
 import About from "../Screens/About"
 import Navigation from '../Navigation/Navigation';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
