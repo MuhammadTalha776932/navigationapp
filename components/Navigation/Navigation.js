@@ -5,7 +5,7 @@ import About from "../Screens/About"
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 const Tabs = createBottomTabNavigator();
 
-export default function Navigation() {
+export default function Navigation(props) {
 
   return (
       <Tabs.Navigator screenOptions={ ({route}) =>({tabBarIcon:({focused,color,size})=>{
