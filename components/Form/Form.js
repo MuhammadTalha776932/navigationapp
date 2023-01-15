@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React,{useState} from 'react';
 import { Text,View,TouchableOpacity,TextInput } from 'react-native'
 
@@ -5,10 +6,17 @@ const Forms = ({navigation,route}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
-    const handleSubmit = () => {
+    const handleSubmit = async() => {
         if (email.length !== 0 && password.length !== 0) {
-            navigation.navigate("Home",{email,password})
-            return;
+            try {
+                await AsyncStorage.setItem("email",email); 
+                await AsyncStorage.setItem("password",password); 
+                navigation.navigate("Home")
+                return;
+            } catch (error) {
+                alert(error.message)
+                return;
+            }
         }
         alert("Please enter the values");
     };
