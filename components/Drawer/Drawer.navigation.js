@@ -11,7 +11,7 @@ const DrawerNavigation = () => {
     const Stack = createStackNavigator();
 
     return(
-        <Stack.Navigator initialRouteName='Login Section'
+        <Stack.Navigator initialRouteName='Login'
         screenOptions={({route,navigation}) =>{ return {drawerPosition:"right",
         headerTitleAlign:"center",
         drawerIcon:({focused,size,color})=>{
@@ -34,7 +34,7 @@ const DrawerNavigation = () => {
             backgroundColor:"#0081B4",
         }}}}
         > 
-            <Stack.Screen options={{header:()=>null}}  name='Login Section' component={Home} />
+            <Stack.Screen options={{header:()=>null}}  name='Login' component={Home} />
             <Stack.Screen  name='Home' component={About}/>
         </Stack.Navigator> 
     )

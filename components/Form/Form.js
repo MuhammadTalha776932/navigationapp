@@ -38,8 +38,8 @@ const Forms = ({navigation,route}) => {
             value={password}
             secureTextEntry={true}
             />
-            <View className="text-center items-center hover:bg-black">
-                <TouchableOpacity className="bg-indigo-500 w-[300px] text-white p-2 rounded-lg
+            <View className="text-center items-center">
+                <TouchableOpacity className="bg-green-500 w-[300px] text-white p-2 rounded-lg
                 hover:text-black
                 " activeOpacity={0.9} onPress={handleSubmit}>
                     <Text className="text-lg text-center text-white">Sign In</Text>
