@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 
-const SplashScreen = () => {
+const SplashScreens = () => {
     return (
     <View className={'bg-white h-screen flex items-center justify-center'}>
         <Text className={'text-center text-2xl font-bold'}>Welcome to my app!</Text>
@@ -12,4 +12,4 @@ const SplashScreen = () => {
 
 
 
-export default SplashScreen;
+export default SplashScreens;
