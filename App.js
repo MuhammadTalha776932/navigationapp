@@ -1,14 +1,15 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import "react-native-reanimated";
-import DrawerNavigation from './components/Drawer/Drawer.navigation';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from "@react-navigation/native"
+
+import SplashScreen from './components/Splash/Splash.screen';
 
 const App = () => {
 
   return (
     <NavigationContainer>
-      <DrawerNavigation/>
+      <SplashScreen/>
     </NavigationContainer>
     );
   };

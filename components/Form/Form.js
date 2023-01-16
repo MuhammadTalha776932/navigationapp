@@ -1,44 +1,9 @@
-var SQLite = require("react-native-sqlite-storage");
+
 import React,{useState} from 'react';
 import { Text,View,TouchableOpacity,TextInput } from 'react-native'
 const Forms = ({navigation,route}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    const db = SQLite.openDatabase(
-        {
-            name:"MainDB",
-            location:"default"
-        },
-        ()=>{},
-        (error) => {console.log(error.message)}
-        
-        )
-    
-    const createTable = () => {
-        try {
-            db.transaction(transaction =>{
-                transaction.executeSql("CREATE TABLE IF NOT EXISTS"
-                                        +"Users"
-                                        +"(ID INTEGER PRIMARY KEY AUTOINCREMENT, Email TEXT, Password TEXT);"                        
-                
-                )
-            })
-        } catch (error) {
-            console.log(error.message)
-        }
-        }
-    const insertTntoTable = async () => {
-        try {
-            await db.transaction(async(transaction )=> {
-                await transaction.executeSql("INSERT INTO Users (Email,Password) VALUES (?,?)",[email,password])
-            })
-        } catch (error) {
-            console.log(error.message);
-        }
-        }  
-
-
 
     React.useEffect(()=>{
         createTable();
@@ -47,9 +12,6 @@ const Forms = ({navigation,route}) => {
     const handleSubmit = async() => {
         if (email.length !== 0 && password.length !== 0) {
             try {
-                // await AsyncStorage.setItem("email",email); 
-                // await AsyncStorage.setItem("password",password); 
-                await insertTntoTable();
                 navigation.navigate("Home")
                 return;
             } catch (error) {
