@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 function Home({navigation,route}) {
   React.useEffect(()=>{
-    setProps();
+    // setProps();
   },[])
   const setProps = () =>{
     try {
