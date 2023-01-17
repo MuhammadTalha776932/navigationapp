@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import Home from "../Screens/Home"
+import Home from "../Screens/LoginPage"
 import About from "../Screens/About"
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 const Tabs = createBottomTabNavigator();
