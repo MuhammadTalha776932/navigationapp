@@ -5,7 +5,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 
 import About from "../Screens/About"
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-import Home from '../Screens/Home';
+import Home from '../Screens/LoginPage';
 
 const DrawerNavigation = () => {
     const Stack = createStackNavigator();
