@@ -11,7 +11,7 @@ function SignupPage({navigation,route}) {
       <SafeAreaView className="flex-1 flex-col h-full">
         <ImageBackground source={HeaderImage} style={{justifyContent:"center"}}>
         <Hero/>
-        <LoginForm route={route} navigation={navigation} navigationPath="Login"  navigateRoute="Login" state={{btnTitle:"Sign up",messageTitle:"Already have account?",formHeader:"Sign up"}}/>
+        <LoginForm route={route} navigation={navigation} navigationPath="Signin"  navigateRoute="Signin" state={{btnTitle:"Sign up",messageTitle:"Already have account?",formHeader:"Sign up"}}/>
         </ImageBackground>
       </SafeAreaView>
       )
