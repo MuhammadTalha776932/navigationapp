@@ -12,7 +12,7 @@ const LoginForm = (props) => {
     const handleSubmit = async() => {
         if (email.length !== 0 && password.length !== 0) {
             try {
-                // navigation.navigate("Home")
+                props.navigation.navigate(props.navigationPath);
                 return;
             } catch (error) {
                 alert(error.message)
