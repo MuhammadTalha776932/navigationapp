@@ -1,10 +1,14 @@
 
 
 import React,{useState} from 'react';
-import { Text,View,TouchableOpacity,TextInput } from 'react-native'
+import { Text,View,TouchableOpacity,TextInput,Dimensions } from 'react-native'
 const LoginForm = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const screenWidth = Dimensions.get("screen").width;
+    const screenheight = Dimensions.get("screen").height;
+    
+    const isPortrait = screenheight > screenWidth;
 
     const handleNavigation = () =>{
         props.navigation.navigate(props?.navigateRoute);
@@ -23,10 +27,10 @@ const LoginForm = (props) => {
     };
    return (
     <View className="flex-initial bottom-2 justify-start h-full">
-        <View className="flex-initial justify-center content-center  bg-slate-100 h-full p-6 rounded-lg shadow-2xl">
+        <View className={`flex-initial justify-center content-center bg-slate-100 h-full p-6 rounded-lg shadow-2xl`}>
             <Text className="text-2xl mb-5 bottom-4 text-center mt-4 font-sans uppercase">{props.state?.formHeader}</Text>
             <TextInput
-            className="bg-gray-200 p-2 text-2xl rounded-lg h-[50px] mb-6"
+            className={`bg-gray-200 p-2 text-2xl rounded-lg ${isPortrait?`h-[50px]`:``} mb-6`}
             placeholder="Email"
             keyboardType="email-address"
             onChangeText={setEmail}
