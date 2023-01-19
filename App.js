@@ -6,6 +6,8 @@ import {NavigationContainer} from "@react-navigation/native"
 import SplashScreen from 'react-native-splash-screen'
 
 import HomeStack from './components/Navigation/HomeStack';
+import { NativeBaseProvider } from 'native-base';
+import StartPage from './components/ParentStartPage/StartPage';
 
 
 
@@ -17,9 +19,12 @@ const App = () => {
   },[])
 
   return (
-    <NavigationContainer >
-      <HomeStack/>
-    </NavigationContainer>
+    <NativeBaseProvider>
+        <NavigationContainer >
+          {/* <HomeStack/> */}
+          <StartPage/>
+        </NavigationContainer>
+    </NativeBaseProvider>
     );
   };
   
