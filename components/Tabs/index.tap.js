@@ -24,8 +24,8 @@ const HomeTabs = () => {
             return (
                 <FontAwesome5 name={iconName}/>
             )
-        },tabBarLabelStyle:{fontSize:20},tabBarStyle:{backgroundColor:"#ffefef"}}}}>
-            <Tabs.Screen name='Home' component={Home}/>
+        },tabBarLabelStyle:{fontSize:20},tabBarStyle:{backgroundColor:"#ffefef"}}}} initialRouteName="Home">
+            <Tabs.Screen name='Home' component={Home} options={{tabBarLabel: 'Home',tabBarStyle:{display:"flex"}}}/>
             <Tabs.Screen name='About' component={About}/>
             <Tabs.Screen name='Contact' component={Contact}/>
         </Tabs.Navigator>

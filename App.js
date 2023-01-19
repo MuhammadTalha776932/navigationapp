@@ -17,7 +17,7 @@ const App = () => {
   },[])
 
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       <HomeStack/>
     </NavigationContainer>
     );
