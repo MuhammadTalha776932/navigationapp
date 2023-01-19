@@ -1,5 +1,6 @@
 package com.navigationapp;
 
+
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
@@ -21,6 +22,8 @@ public class MainApplication extends Application implements ReactApplication {
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
         }
+
+
 
         @Override
         protected List<ReactPackage> getPackages() {
